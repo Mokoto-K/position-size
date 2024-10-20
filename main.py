@@ -7,7 +7,7 @@ while True:
         entry_price = int(input("Enter entry price: "))
         stop_price = int(input("Enter stop price: "))
         risk_percent = float(input("Enter amount of risk: "))
-        account_size = exchange.get_balance()
+        account_size = exchange.get_balance({"currency":"USDt"})
 
         if direction == "buy".lower():
             difference = (entry_price - stop_price) / entry_price
@@ -23,3 +23,5 @@ while True:
 risk_amount = account_size * risk_percent / 100
 size = risk_amount / difference
 print(f"Direction: {direction}\nEntry: {entry_price}\nStop Loss: {stop_price}\nSize: {round(size)}")
+
+# exchange.create_order("XBTUSDT", "Buy", "Limit", 65000, 1000)
