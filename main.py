@@ -24,4 +24,4 @@ risk_amount = account_size * risk_percent / 100
 size = risk_amount / difference
 print(f"Direction: {direction}\nEntry: {entry_price}\nStop Loss: {stop_price}\nSize: {round(size)}")
 
-# exchange.create_order("XBTUSDT", "Buy", "Limit", 65000, 1000)
+exchange.create_order("XBTUSDT", "Buy", "Limit", 65000, 1000)

@@ -73,7 +73,7 @@ def create_order(symbol: str, side: str, ordtype: str, price: int, orderqty: int
     None
     """
 
-    json_params = {'symbol': symbol, 'ordType': ordtype, 'price': price, 'orderQty': orderqty}
+    json_params = {'symbol': symbol, 'buy':side, 'ordType': ordtype, 'price': price, 'orderQty': orderqty}
 
     headers = api_signature("POST", BASE_URL + ORDER_URL, json_params)
     requests.post(BASE_URL + ORDER_URL, json=json_params, headers=headers)
